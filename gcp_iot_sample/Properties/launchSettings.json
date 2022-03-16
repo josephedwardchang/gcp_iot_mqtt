@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "gcp_iot_sample": {
+      "commandName": "Project",
+      "commandLineArgs": "-p essential-keep-197822 -r PH-CEB-ITPE5 -d DDC-5 -a us-central1 -t pointset -l ddc5_rsa_cert.p12 -w l1nkw1s3 "
+    }
+  }
+}
