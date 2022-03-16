@@ -35,3 +35,15 @@ MessageId = 2 Published = True
 MessageId = 3 Published = True
 
 ...
+
+## For sending data:
+
+C:\>dotnet gcp_iot_sample.dll -p projId -r regId -d devId -a region -t pointset -l ddc5_rsa_cert.p12 -w passwordofcert 
+
+## For viewing pubsub messages within a date/time interval:
+
+C:\>dotnet gcp_iot_sample.dll -p projId -r regId -d devId -a region -l pathTo_rsa_cert.p12 -w passwordofcert -t topicId -b beginDate(e.g.,2022-02-03T14:48:21Z) -e endDate(e.g.,2022-02-04T14:40:21Z) -s subscriptionId
+
+## For viewing pubsub messages in (almost) realtime (this is auto-ack enabled, meaning the messages disappear in pubsub)
+
+C:\>dotnet gcp_iot_sample.dll -p projId -r regId -d devId -a region -l pathTo_rsa_cert.p12 -w passwordofcert -t topicId -s subscriptionId -c waitInMsec (> 5000)
